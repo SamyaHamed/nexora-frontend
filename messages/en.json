@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "Nexora Software Solutions",
+    "description": "Nexora Software Solutions builds practical digital solutions for businesses."
+  },
+  "LangSwitcher": {
+    "label": "Switch language"
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "comingSoon": "Coming Soon",
+    "contact": "Contact"
+  },
+  "Navbar": {
+    "cta": "Start Your Project",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menuLabel": "Main navigation"
+  },
+  "Footer": {
+    "tagline": "Turning ideas into practical digital solutions.",
+    "quickLinksHeading": "Quick Links",
+    "servicesHeading": "Services",
+    "contactHeading": "Contact",
+    "service1": "Web & App Development",
+    "service2": "Custom Systems",
+    "service3": "UX/UI Design",
+    "service4": "Support & Maintenance",
+    "copyright": "© {year} {name}. All rights reserved."
+  },
+  "Social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
+  },
+  "Layout": {
+    "skipToContent": "Skip to content"
+  },
+  "Showcase": {
+    "eyebrow": "Component Library",
+    "title": "UI Building Blocks",
+    "description": "Every base component from components/ui, in every variant, so the design system can be reviewed visually before it's used to build real pages.",
+    "buttons": {
+      "heading": "Buttons",
+      "headingDescription": "Variants, sizes, and states.",
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "ghost": "Ghost",
+      "loading": "Loading",
+      "disabled": "Disabled",
+      "withIcon": "Continue",
+      "asLink": "Visit Homepage"
+    },
+    "badges": {
+      "heading": "Badges",
+      "headingDescription": "For tags and statuses.",
+      "neutral": "Neutral",
+      "brand": "Featured",
+      "success": "Active",
+      "warning": "Pending",
+      "info": "New"
+    },
+    "cards": {
+      "heading": "Cards",
+      "headingDescription": "Surfaces for services and projects.",
+      "title1": "Web & App Development",
+      "body1": "Complete websites, systems, and interfaces built on modern, scalable technology.",
+      "title2": "UX/UI Design",
+      "body2": "Interfaces designed around clarity, accessibility, and your brand identity.",
+      "title3": "With an Image Slot",
+      "body3": "Cards can optionally show media above the body content."
+    },
+    "form": {
+      "heading": "Form Fields",
+      "headingDescription": "Input, Textarea, Select, and Label, ready for react-hook-form.",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Jane Doe",
+      "nameHelper": "As it should appear on your project.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "jane@company.com",
+      "emailError": "Please enter a valid email address.",
+      "budgetLabel": "Budget Range",
+      "budgetPlaceholder": "Select a range",
+      "budgetOption1": "$1,000 – $5,000",
+      "budgetOption2": "$5,000 – $15,000",
+      "budgetOption3": "$15,000+",
+      "messageLabel": "Project Details",
+      "messagePlaceholder": "Tell us a bit about your project…",
+      "submit": "Send Request"
+    }
+  }
+}

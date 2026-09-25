@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "نيكسورا لحلول البرمجيات",
+    "description": "نيكسورا سوفتوير سوليوشنز تبني حلولاً رقمية عملية للشركات والمؤسسات."
+  },
+  "LangSwitcher": {
+    "label": "تغيير اللغة"
+  },
+  "Nav": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "services": "خدماتنا",
+    "projects": "مشاريعنا",
+    "comingSoon": "قريبًا",
+    "contact": "تواصل معنا"
+  },
+  "Navbar": {
+    "cta": "ابدأ مشروعك",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "menuLabel": "التنقل الرئيسي"
+  },
+  "Footer": {
+    "tagline": "نحوّل الأفكار إلى حلول رقمية عملية.",
+    "quickLinksHeading": "روابط سريعة",
+    "servicesHeading": "الخدمات",
+    "contactHeading": "تواصل معنا",
+    "service1": "تطوير المواقع والتطبيقات",
+    "service2": "أنظمة مخصصة",
+    "service3": "تصميم تجربة وواجهة المستخدم",
+    "service4": "الدعم والصيانة",
+    "copyright": "© {year} {name}. جميع الحقوق محفوظة."
+  },
+  "Social": {
+    "facebook": "فيسبوك",
+    "instagram": "إنستغرام",
+    "linkedin": "لينكد إن"
+  },
+  "Layout": {
+    "skipToContent": "تخطَّ إلى المحتوى"
+  },
+  "Showcase": {
+    "eyebrow": "مكتبة المكوّنات",
+    "title": "عناصر بناء الواجهة",
+    "description": "جميع المكوّنات الأساسية من components/ui، بكل حالاتها، لمراجعة نظام التصميم بصريًا قبل استخدامه في بناء الصفحات الفعلية.",
+    "buttons": {
+      "heading": "الأزرار",
+      "headingDescription": "الأنماط والأحجام والحالات المختلفة.",
+      "primary": "أساسي",
+      "secondary": "ثانوي",
+      "ghost": "شفاف",
+      "loading": "جاري التحميل",
+      "disabled": "معطّل",
+      "withIcon": "متابعة",
+      "asLink": "زيارة الصفحة الرئيسية"
+    },
+    "badges": {
+      "heading": "الشارات",
+      "headingDescription": "للوسوم والحالات.",
+      "neutral": "عام",
+      "brand": "مميز",
+      "success": "نشط",
+      "warning": "قيد الانتظار",
+      "info": "جديد"
+    },
+    "cards": {
+      "heading": "البطاقات",
+      "headingDescription": "أسطح لعرض الخدمات والمشاريع.",
+      "title1": "تطوير المواقع والتطبيقات",
+      "body1": "مواقع وأنظمة وواجهات متكاملة، مبنية على أحدث التقنيات وقابلة للتوسع.",
+      "title2": "تصميم تجربة وواجهة المستخدم",
+      "body2": "واجهات مصمّمة حول الوضوح وإمكانية الوصول وهوية علامتك التجارية.",
+      "title3": "مع فتحة صورة",
+      "body3": "يمكن للبطاقات عرض وسائط اختياريًا أعلى محتوى النص."
+    },
+    "form": {
+      "heading": "حقول النموذج",
+      "headingDescription": "Input و Textarea و Select و Label، جاهزة للعمل مع react-hook-form.",
+      "nameLabel": "الاسم الكامل",
+      "namePlaceholder": "سارة أحمد",
+      "nameHelper": "كما يجب أن يظهر في مشروعك.",
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceholder": "sara@company.com",
+      "emailError": "الرجاء إدخال بريد إلكتروني صحيح.",
+      "budgetLabel": "نطاق الميزانية",
+      "budgetPlaceholder": "اختر نطاقًا",
+      "budgetOption1": "١٬٠٠٠ – ٥٬٠٠٠ دولار",
+      "budgetOption2": "٥٬٠٠٠ – ١٥٬٠٠٠ دولار",
+      "budgetOption3": "أكثر من ١٥٬٠٠٠ دولار",
+      "messageLabel": "تفاصيل المشروع",
+      "messagePlaceholder": "أخبرنا قليلاً عن مشروعك...",
+      "submit": "إرسال الطلب"
+    }
+  }
+}

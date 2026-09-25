@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Brand (orange) scale — #F97316 is the 500 step */
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-300: #fdba74;
+  --color-brand-400: #fb923c;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a3412;
+  --color-brand-900: #7c2d12;
+  --color-brand-950: #431407;
+
+  /* Ink (dark neutral) scale */
+  --color-ink-50: #f7f7f8;
+  --color-ink-100: #eceef0;
+  --color-ink-200: #d5d9df;
+  --color-ink-300: #b1b8c2;
+  --color-ink-400: #848d9c;
+  --color-ink-500: #5f6773;
+  --color-ink-600: #454b56;
+  --color-ink-700: #333842;
+  --color-ink-800: #22262e;
+  --color-ink-900: #16181e;
+  --color-ink-950: #0c0d11;
+
+  /* Semantic surface & text tokens */
+  --color-bg: var(--color-ink-950);
+  --color-surface: var(--color-ink-900);
+  --color-card: var(--color-ink-800);
+  --color-border: var(--color-ink-600);
+  --color-border-subtle: var(--color-ink-800);
+  --color-text-primary: var(--color-ink-50);
+  --color-text-muted: var(--color-ink-300);
+  --color-text-subtle: var(--color-ink-400);
+
+  /* Semantic accent tokens */
+  --color-brand: var(--color-brand-500);
+  --color-brand-hover: var(--color-brand-400);
+  --color-on-brand: var(--color-ink-950);
+  --color-link: var(--color-brand-400);
+  --color-success: #4ade80;
+  --color-danger: #f87171;
+  --color-warning: #fbbf24;
+  --color-info: #38bdf8;
+
+  /* Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Shadows (tuned for a dark surface, not white) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 0 1px rgba(249, 115, 22, 0.4), 0 8px 24px rgba(249, 115, 22, 0.25);
+
+  /* Layout */
+  --container-width: 80rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans-active);
+  --font-arabic: var(--font-ibm-plex-sans-arabic);
+  --font-latin: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --font-sans-active: var(--font-inter), var(--font-ibm-plex-sans-arabic),
+    ui-sans-serif, system-ui, sans-serif;
+}
+
+:lang(ar) {
+  --font-sans-active: var(--font-ibm-plex-sans-arabic), var(--font-inter),
+    ui-sans-serif, system-ui, sans-serif;
+}
+
+:lang(en) {
+  --font-sans-active: var(--font-inter), var(--font-ibm-plex-sans-arabic),
+    ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans-active);
 }
