@@ -489,7 +489,8 @@
       "read": "Read",
       "markRead": "Mark as read",
       "markUnread": "Mark as unread",
-      "reply": "Reply by email"
+      "reply": "Reply by email",
+      "replySubject": "Re: {subject}"
     },
     "services": {
       "title": "Services",

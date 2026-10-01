@@ -46,6 +46,20 @@ const sizeClasses: Record<ButtonSize, string> = {
   lg: "h-13 gap-2.5 px-8 text-base",
 };
 
+/** Button styling for elements that can't be <Button>, e.g. a plain <a> to a file or mailto:. */
+export function buttonClassName({
+  variant = "primary",
+  size = "md",
+  className,
+}: { variant?: ButtonVariant; size?: ButtonSize; className?: string } = {}): string {
+  return cn(
+    "inline-flex items-center justify-center rounded-[var(--radius-md)] font-semibold transition-[background-color,box-shadow,border-color] duration-[var(--duration-fast)] ease-[var(--ease-standard)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-focus-outline)] disabled:pointer-events-none disabled:opacity-50",
+    variantClasses[variant],
+    sizeClasses[size],
+    className,
+  );
+}
+
 function Spinner({ className }: { className?: string }) {
   return (
     <span
@@ -75,12 +89,7 @@ export const Button = forwardRef<
   },
   ref,
 ) {
-  const classes = cn(
-    "inline-flex items-center justify-center rounded-[var(--radius-md)] font-semibold transition-[background-color,box-shadow,border-color] duration-[var(--duration-fast)] ease-[var(--ease-standard)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-focus-outline)] disabled:pointer-events-none disabled:opacity-50",
-    variantClasses[variant],
-    sizeClasses[size],
-    className,
-  );
+  const classes = buttonClassName({ variant, size, className });
 
   const content = (
     <>

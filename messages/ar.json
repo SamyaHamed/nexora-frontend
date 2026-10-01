@@ -489,7 +489,8 @@
       "read": "مقروءة",
       "markRead": "تعليم كمقروءة",
       "markUnread": "تعليم كغير مقروءة",
-      "reply": "الرد عبر البريد"
+      "reply": "الرد عبر البريد",
+      "replySubject": "رد: {subject}"
     },
     "services": {
       "title": "الخدمات",
