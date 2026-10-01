@@ -62,33 +62,7 @@
       "eyebrow": "What we do",
       "title": "Software built around your business",
       "description": "From the first sketch to long-term support, one team handles design, development and delivery.",
-      "learnMore": "Learn more",
-      "items": {
-        "web": {
-          "title": "Website & app development",
-          "description": "Fast, responsive websites and mobile apps built with React, Next.js and Node.js."
-        },
-        "systems": {
-          "title": "Custom systems",
-          "description": "Internal tools, portals and dashboards shaped around how your team actually works."
-        },
-        "ux": {
-          "title": "UX/UI design",
-          "description": "Research-led interfaces that are clear, accessible and true to your brand."
-        },
-        "api": {
-          "title": "APIs & integrations",
-          "description": "Documented REST APIs that connect your products, payments and third-party services."
-        },
-        "db": {
-          "title": "Databases",
-          "description": "Well-structured PostgreSQL and MongoDB data models that stay fast as you grow."
-        },
-        "support": {
-          "title": "Support & maintenance",
-          "description": "Monitoring, backups, updates and a team that answers when something needs fixing."
-        }
-      }
+      "learnMore": "Learn more"
     },
     "projects": {
       "eyebrow": "Featured projects",
@@ -196,6 +170,95 @@
         "partners": {
           "title": "Long-term partners",
           "description": "We stay after launch to support, measure and improve."
+        }
+      }
+    }
+  },
+  "Services": {
+    "metaTitle": "Services",
+    "metaDescription": "Website and app development, custom systems, UX/UI design, APIs, databases, and support from one team.",
+    "header": {
+      "eyebrow": "Services",
+      "title": "Everything you need to launch and grow a digital product.",
+      "description": "One team for design, development, data and support — so nothing gets lost between handovers."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions clients ask us",
+      "description": "Can’t find your answer? Send us a message and we’ll reply within two working days.",
+      "cta": "Ask a question",
+      "items": {
+        "duration": {
+          "question": "How long does a project take?",
+          "answer": "[Typical ranges — e.g. a corporate website in 4–6 weeks, a custom system in 2–4 months.]"
+        },
+        "cost": {
+          "question": "How much will it cost?",
+          "answer": "[Explain how you estimate — fixed price per phase or monthly team — and what affects cost.]"
+        },
+        "support": {
+          "question": "Do you offer support after launch?",
+          "answer": "[Describe support plans: monitoring, updates and response times.]"
+        },
+        "existing": {
+          "question": "Can you work on an existing product?",
+          "answer": "[Explain how you audit and take over existing code.]"
+        }
+      }
+    },
+    "items": {
+      "web": {
+        "title": "Website & app development",
+        "description": "Fast, responsive websites and mobile apps built with React, Next.js and Node.js.",
+        "features": {
+          "f1": "Marketing and corporate websites",
+          "f2": "Web apps and customer portals",
+          "f3": "iOS and Android apps"
+        }
+      },
+      "systems": {
+        "title": "Custom systems",
+        "description": "Internal tools, portals and dashboards shaped around how your team actually works.",
+        "features": {
+          "f1": "Admin dashboards",
+          "f2": "Booking, inventory and CRM tools",
+          "f3": "Role-based permissions"
+        }
+      },
+      "ux": {
+        "title": "UX/UI design",
+        "description": "Research-led interfaces that are clear, accessible and true to your brand.",
+        "features": {
+          "f1": "User research and flows",
+          "f2": "Wireframes and prototypes",
+          "f3": "Design systems"
+        }
+      },
+      "api": {
+        "title": "APIs & integrations",
+        "description": "Documented REST APIs that connect your products, payments and third-party services.",
+        "features": {
+          "f1": "REST API design and docs",
+          "f2": "Payment and SMS integrations",
+          "f3": "Authentication with JWT"
+        }
+      },
+      "db": {
+        "title": "Databases",
+        "description": "Well-structured PostgreSQL and MongoDB data models that stay fast as you grow.",
+        "features": {
+          "f1": "PostgreSQL and MongoDB",
+          "f2": "Data modelling and migrations",
+          "f3": "Backups and performance"
+        }
+      },
+      "support": {
+        "title": "Support & maintenance",
+        "description": "Monitoring, backups, updates and a team that answers when something needs fixing.",
+        "features": {
+          "f1": "Hosting, HTTPS and monitoring",
+          "f2": "Security updates",
+          "f3": "Feature improvements"
         }
       }
     }

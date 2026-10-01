@@ -1,20 +1,8 @@
 import type { ProductStatus } from "@/features/projects/types";
-import type { ServiceIconName } from "@/features/services/types";
 
 // Static home content until the dashboard API is wired up. Copy lives in
 // messages/*.json under "Home"; keys here pick the message, and tags are
 // technology names, which stay the same in every locale.
-
-export type HomeServiceKey = "web" | "systems" | "ux" | "api" | "db" | "support";
-
-export const homeServices: { key: HomeServiceKey; icon: ServiceIconName }[] = [
-  { key: "web", icon: "code" },
-  { key: "systems", icon: "system" },
-  { key: "ux", icon: "ux" },
-  { key: "api", icon: "api" },
-  { key: "db", icon: "db" },
-  { key: "support", icon: "support" },
-];
 
 export type ProjectCategoryKey = "customSystem" | "mobileApp" | "website";
 
