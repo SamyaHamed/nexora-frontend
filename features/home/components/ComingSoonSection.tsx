@@ -5,25 +5,27 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ProjectCard } from "@/features/projects/components/ProjectCard";
 import { Link } from "@/i18n/navigation";
-import { upcomingProducts } from "../data";
+import { products } from "@/features/products/data";
 
 export async function ComingSoonSection() {
-  const [t, tStatus] = await Promise.all([
+  const [t, tProducts, tStatus] = await Promise.all([
     getTranslations("Home.comingSoon"),
+    getTranslations("Products"),
     getTranslations("ProductStatus"),
   ]);
+  const featuredProducts = products.filter((product) => product.featured);
 
   return (
     <Section className="border-y border-[color:var(--color-border-subtle)] bg-[color:var(--color-surface)]">
       <Container>
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
         <ul className="mt-12 grid gap-6 md:grid-cols-2">
-          {upcomingProducts.map((product) => (
+          {featuredProducts.map((product) => (
             <li key={product.key}>
               <ProjectCard
-                category={t("category")}
-                title={t(`items.${product.key}.title`)}
-                description={t(`items.${product.key}.description`)}
+                category={tProducts("category")}
+                title={tProducts(`items.${product.key}.title`)}
+                description={tProducts(`items.${product.key}.description`)}
                 tags={product.tags}
                 status={product.status}
                 statusLabel={tStatus(product.status)}

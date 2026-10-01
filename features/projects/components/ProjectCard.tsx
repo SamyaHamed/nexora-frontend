@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
-import { Badge, type BadgeVariant } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
-import type { ProductStatus } from "../types";
+import { StatusBadge } from "@/features/products/components/StatusBadge";
+import type { ProductStatus } from "@/features/products/types";
 
 export type ProjectCardProps = {
   category?: string;
@@ -12,13 +12,6 @@ export type ProjectCardProps = {
   image?: ReactNode;
   status?: ProductStatus;
   statusLabel?: string;
-};
-
-const statusVariant: Record<ProductStatus, BadgeVariant> = {
-  planning: "neutral",
-  development: "brand",
-  beta: "info",
-  launched: "success",
 };
 
 export function ProjectCard({
@@ -39,9 +32,7 @@ export function ProjectCard({
         <>
           {image}
           {status && statusLabel ? (
-            <Badge variant={statusVariant[status]} dot className="absolute start-4 top-4">
-              {statusLabel}
-            </Badge>
+            <StatusBadge status={status} label={statusLabel} className="absolute start-4 top-4" />
           ) : null}
         </>
       }

@@ -74,18 +74,7 @@
       "eyebrow": "Coming soon",
       "title": "What we’re building next",
       "description": "Nexora’s own products — follow along as they move from idea to launch.",
-      "category": "Nexora product",
-      "seeAll": "See all upcoming products",
-      "items": {
-        "u1": {
-          "title": "[Product name]",
-          "description": "[What it does and who it’s for.]"
-        },
-        "u2": {
-          "title": "[Product name]",
-          "description": "[What it does and who it’s for.]"
-        }
-      }
+      "seeAll": "See all upcoming products"
     },
     "process": {
       "eyebrow": "Our process",
@@ -296,6 +285,36 @@
       "solution": "[What Nexora designed and built.]",
       "resultsLabel": "Results",
       "results": "[Measured outcome after launch.]"
+    }
+  },
+  "Products": {
+    "metaTitle": "Coming Soon",
+    "metaDescription": "Nexora’s own upcoming products and where each one stands today.",
+    "header": {
+      "eyebrow": "Coming soon",
+      "title": "What Nexora is building next.",
+      "description": "Our own products, from early idea to launch. Each one shows where it stands today."
+    },
+    "category": "Nexora product",
+    "statusLegend": "Status:",
+    "progressLabel": "{name} progress",
+    "items": {
+      "u1": {
+        "title": "[Product name]",
+        "description": "[What it does and who it’s for — one sentence.]"
+      },
+      "u2": {
+        "title": "[Product name]",
+        "description": "[What it does and who it’s for — one sentence.]"
+      },
+      "u3": {
+        "title": "[Product name]",
+        "description": "[What it does and who it’s for — one sentence.]"
+      },
+      "u4": {
+        "title": "[Product name]",
+        "description": "[What it does and who it’s for — one sentence.]"
+      }
     }
   },
   "CtaBand": {

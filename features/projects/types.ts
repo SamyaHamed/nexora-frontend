@@ -1,5 +1,3 @@
-export type ProductStatus = "planning" | "development" | "beta" | "launched";
-
 export const projectCategories = ["website", "mobileApp", "customSystem", "uxui"] as const;
 
 export type ProjectCategory = (typeof projectCategories)[number];
