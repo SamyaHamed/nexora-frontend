@@ -25,7 +25,7 @@ export async function Navbar() {
   return (
     <StickyHeader>
       <Container className="flex h-16 items-center justify-between lg:h-20">
-        <Logo />
+        <Logo priority />
 
         <nav aria-label={tNavbar("menuLabel")} className="hidden lg:block">
           <NavLinks links={links} />

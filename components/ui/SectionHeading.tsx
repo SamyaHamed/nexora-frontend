@@ -7,6 +7,7 @@ export type SectionHeadingProps = {
   title: string;
   description?: string;
   align?: SectionHeadingAlign;
+  as?: "h1" | "h2";
   className?: string;
 };
 
@@ -15,28 +16,29 @@ export function SectionHeading({
   title,
   description,
   align = "start",
+  as: Heading = "h2",
   className,
 }: SectionHeadingProps) {
   return (
     <div
       className={cn(
-        "flex flex-col gap-3",
+        "flex max-w-2xl flex-col",
         align === "center"
-          ? "items-center text-center"
+          ? "mx-auto items-center text-center"
           : "items-start text-start",
         className,
       )}
     >
       {eyebrow ? (
-        <span className="text-sm font-semibold uppercase tracking-wide text-[color:var(--color-brand)]">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[var(--tracking-eyebrow)] text-[color:var(--color-brand-text)] rtl:text-sm rtl:normal-case rtl:tracking-normal">
           {eyebrow}
-        </span>
+        </p>
       ) : null}
-      <h2 className="text-3xl font-semibold tracking-tight text-[color:var(--color-text-primary)] sm:text-4xl">
+      <Heading className="font-display text-3xl font-bold text-[color:var(--color-text-primary)] sm:text-4xl rtl:leading-[1.4]">
         {title}
-      </h2>
+      </Heading>
       {description ? (
-        <p className="max-w-2xl text-[color:var(--color-text-muted)]">
+        <p className="mt-4 text-lg text-[color:var(--color-text-muted)]">
           {description}
         </p>
       ) : null}

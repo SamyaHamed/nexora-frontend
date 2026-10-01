@@ -33,18 +33,32 @@ export type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-[color:var(--color-brand)] text-[color:var(--color-on-brand)] hover:bg-[color:var(--color-brand-hover)]",
+    "bg-[color:var(--color-brand)] text-[color:var(--color-on-brand)] hover:bg-[color:var(--color-brand-hover)] hover:shadow-[var(--shadow-accent)]",
   secondary:
-    "border border-[color:var(--color-border)] text-[color:var(--color-text-primary)] hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)]",
+    "bg-[color:var(--color-inverse-bg)] text-[color:var(--color-inverse-text)] hover:bg-[color:var(--color-inverse-hover)]",
   ghost:
-    "text-[color:var(--color-text-primary)] hover:bg-[color:var(--color-surface)]",
+    "border border-[color:var(--color-border)] bg-transparent text-[color:var(--color-text-primary)] hover:bg-[color:var(--color-surface-hover)]",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
   sm: "h-9 gap-1.5 px-3.5 text-sm",
   md: "h-11 gap-2 px-5 text-sm",
-  lg: "h-12 gap-2.5 px-6 text-base",
+  lg: "h-13 gap-2.5 px-8 text-base",
 };
+
+/** Button styling for elements that can't be <Button>, e.g. a plain <a> to a file or mailto:. */
+export function buttonClassName({
+  variant = "primary",
+  size = "md",
+  className,
+}: { variant?: ButtonVariant; size?: ButtonSize; className?: string } = {}): string {
+  return cn(
+    "inline-flex items-center justify-center rounded-[var(--radius-md)] font-semibold transition-[background-color,box-shadow,border-color] duration-[var(--duration-fast)] ease-[var(--ease-standard)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-focus-outline)] disabled:pointer-events-none disabled:opacity-50",
+    variantClasses[variant],
+    sizeClasses[size],
+    className,
+  );
+}
 
 function Spinner({ className }: { className?: string }) {
   return (
@@ -75,12 +89,7 @@ export const Button = forwardRef<
   },
   ref,
 ) {
-  const classes = cn(
-    "inline-flex items-center justify-center rounded-[var(--radius-md)] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-bg)] disabled:pointer-events-none disabled:opacity-50",
-    variantClasses[variant],
-    sizeClasses[size],
-    className,
-  );
+  const classes = buttonClassName({ variant, size, className });
 
   const content = (
     <>

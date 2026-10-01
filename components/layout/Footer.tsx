@@ -1,8 +1,10 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/layout/Logo";
 import { Link } from "@/i18n/navigation";
-import { siteConfig, type SocialKey } from "@/config/site";
+import { siteConfig, socialKeys, type SocialKey } from "@/config/site";
+import { getSettings } from "@/features/settings/api";
+import { pick } from "@/lib/localized";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -47,10 +49,12 @@ const socialIcons: Record<SocialKey, (props: { className?: string }) => React.JS
 };
 
 export async function Footer() {
-  const [tFooter, tNav, tSocial] = await Promise.all([
+  const [tFooter, tNav, tSocial, locale, settings] = await Promise.all([
     getTranslations("Footer"),
     getTranslations("Nav"),
     getTranslations("Social"),
+    getLocale(),
+    getSettings(),
   ]);
 
   const year = new Date().getFullYear();
@@ -62,25 +66,25 @@ export async function Footer() {
   ];
 
   return (
-    <footer className="border-t border-[color:var(--color-border-subtle)] bg-[color:var(--color-surface)]">
+    <footer className="theme-dark border-t border-[color:var(--color-border-subtle)]">
       <Container className="flex flex-col gap-12 py-12 lg:py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
-            <Logo />
+            <Logo onDark />
             <p className="max-w-xs text-sm text-[color:var(--color-text-muted)]">
               {tFooter("tagline")}
             </p>
             <div className="flex items-center gap-3">
-              {siteConfig.social.map((social) => {
-                const Icon = socialIcons[social.key];
+              {socialKeys.map((key) => {
+                const Icon = socialIcons[key];
                 return (
                   <a
-                    key={social.key}
-                    href={social.href}
+                    key={key}
+                    href={settings.social[key]}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={tSocial(social.key)}
-                    className="inline-flex size-9 items-center justify-center rounded-full border border-[color:var(--color-border)] text-[color:var(--color-text-muted)] transition-colors hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-surface)]"
+                    aria-label={tSocial(key)}
+                    className="inline-flex size-9 items-center justify-center rounded-full border border-[color:var(--color-border)] text-[color:var(--color-text-muted)] transition-colors hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-bg)]"
                   >
                     <Icon className="size-4" />
                   </a>
@@ -127,22 +131,22 @@ export async function Footer() {
             <ul className="flex flex-col gap-2 text-sm text-[color:var(--color-text-muted)]">
               <li>
                 <a
-                  href={`mailto:${siteConfig.contact.email}`}
+                  href={`mailto:${settings.email}`}
                   className="transition-colors hover:text-[color:var(--color-text-primary)]"
                 >
-                  {siteConfig.contact.email}
+                  {settings.email}
                 </a>
               </li>
               <li>
                 <a
-                  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
+                  href={`tel:${settings.phone.replace(/\s+/g, "")}`}
                   className="transition-colors hover:text-[color:var(--color-text-primary)]"
                   dir="ltr"
                 >
-                  {siteConfig.contact.phone}
+                  {settings.phone}
                 </a>
               </li>
-              <li>{siteConfig.contact.address}</li>
+              <li>{pick(settings.address, locale)}</li>
             </ul>
           </div>
         </div>

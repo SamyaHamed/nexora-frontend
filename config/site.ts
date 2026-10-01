@@ -6,34 +6,21 @@ export type NavLinkKey =
   | "comingSoon"
   | "contact";
 
-export type SocialKey = "facebook" | "instagram" | "linkedin";
+export const socialKeys = ["facebook", "instagram", "linkedin"] as const;
+
+export type SocialKey = (typeof socialKeys)[number];
 
 export type NavLink = {
   key: NavLinkKey;
   href: string;
 };
 
-export type SocialLink = {
-  key: SocialKey;
-  href: string;
-};
-
-export type ContactInfo = {
-  email: string;
-  phone: string;
-  address: string;
-};
-
 export type SiteConfig = {
   name: string;
   nav: NavLink[];
-  social: SocialLink[];
-  contact: ContactInfo;
 };
 
-// Placeholder values. This will be replaced by a call to the API's
-// Website Settings endpoint — keep this shape stable so that swap is a
-// drop-in change.
+// Contact details and social links are edited in the dashboard (Settings).
 export const siteConfig: SiteConfig = {
   name: "Nexora",
   nav: [
@@ -44,14 +31,4 @@ export const siteConfig: SiteConfig = {
     { key: "comingSoon", href: "/coming-soon" },
     { key: "contact", href: "/contact" },
   ],
-  social: [
-    { key: "facebook", href: "https://facebook.com/nexora" },
-    { key: "instagram", href: "https://instagram.com/nexora" },
-    { key: "linkedin", href: "https://linkedin.com/company/nexora" },
-  ],
-  contact: {
-    email: "hello@nexora.example",
-    phone: "+970 00 000 0000",
-    address: "Ramallah, Palestine",
-  },
 };

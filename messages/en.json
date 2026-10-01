@@ -36,8 +36,280 @@
     "instagram": "Instagram",
     "linkedin": "LinkedIn"
   },
+  "Logo": {
+    "homeLabel": "Nexora Software Solutions — Home"
+  },
   "Layout": {
     "skipToContent": "Skip to content"
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "Nexora Software Solutions",
+      "title": "We build practical digital solutions that move your business forward.",
+      "description": "Websites, apps and custom systems — designed with care, built to scale, and supported long after launch.",
+      "primaryCta": "Start your project",
+      "secondaryCta": "View our work",
+      "visual": {
+        "requestTitle": "Project request",
+        "requestStatus": "In review",
+        "fromIdea": "From idea",
+        "toLaunch": "to launch",
+        "bilingual": "Arabic & English",
+        "rtlReady": "RTL ready"
+      }
+    },
+    "services": {
+      "eyebrow": "What we do",
+      "title": "Software built around your business",
+      "description": "From the first sketch to long-term support, one team handles design, development and delivery.",
+      "learnMore": "Learn more"
+    },
+    "projects": {
+      "eyebrow": "Featured projects",
+      "title": "Work we’re proud of",
+      "description": "A selection of products we’ve designed and built for our clients.",
+      "viewAll": "All projects"
+    },
+    "comingSoon": {
+      "eyebrow": "Coming soon",
+      "title": "What we’re building next",
+      "description": "Nexora’s own products — follow along as they move from idea to launch.",
+      "seeAll": "See all upcoming products"
+    },
+    "process": {
+      "eyebrow": "Our process",
+      "title": "Clear steps from concept to delivery",
+      "steps": {
+        "discover": {
+          "title": "Discover",
+          "description": "We learn your goals, users and constraints, then agree on scope and budget."
+        },
+        "design": {
+          "title": "Design",
+          "description": "Wireframes and UI designs you can click through and comment on."
+        },
+        "build": {
+          "title": "Build",
+          "description": "Frontend, backend and database built in short, visible milestones."
+        },
+        "launch": {
+          "title": "Launch & support",
+          "description": "Testing, deployment with HTTPS and backups, then ongoing care."
+        }
+      }
+    }
+  },
+  "About": {
+    "metaTitle": "About",
+    "metaDescription": "Nexora Software Solutions designs, builds and supports websites, apps and custom systems for businesses.",
+    "header": {
+      "eyebrow": "About Nexora",
+      "title": "A software team that turns ideas into practical digital products.",
+      "description": "Nexora Software Solutions designs, builds and supports websites, apps and custom systems for businesses that want technology that simply works."
+    },
+    "whoWeAre": {
+      "eyebrow": "Who we are",
+      "title": "Small enough to care, skilled enough to deliver",
+      "paragraph1": "[Company introduction — two or three sentences on when Nexora started, who is on the team, and the kinds of clients you work with.]",
+      "paragraph2": "[A second paragraph on how you work: one team across design, frontend, backend and support, working in Arabic and English.]"
+    },
+    "vision": {
+      "label": "Our vision",
+      "text": "[A world where every business can turn its ideas into reliable digital products.]"
+    },
+    "mission": {
+      "label": "Our mission",
+      "text": "[To design and build practical software that solves real problems, on time and with care.]"
+    },
+    "values": {
+      "eyebrow": "Our values",
+      "title": "How we work",
+      "items": {
+        "practical": {
+          "title": "Practical first",
+          "description": "We build what solves the problem — no unnecessary features, no jargon."
+        },
+        "communication": {
+          "title": "Clear communication",
+          "description": "You always know what we’re working on, what’s next and what it costs."
+        },
+        "lasting": {
+          "title": "Built to last",
+          "description": "Clean code, documentation and security from day one, not as an afterthought."
+        },
+        "partners": {
+          "title": "Long-term partners",
+          "description": "We stay after launch to support, measure and improve."
+        }
+      }
+    }
+  },
+  "Services": {
+    "metaTitle": "Services",
+    "metaDescription": "Website and app development, custom systems, UX/UI design, APIs, databases, and support from one team.",
+    "header": {
+      "eyebrow": "Services",
+      "title": "Everything you need to launch and grow a digital product.",
+      "description": "One team for design, development, data and support — so nothing gets lost between handovers."
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions clients ask us",
+      "description": "Can’t find your answer? Send us a message and we’ll reply within two working days.",
+      "cta": "Ask a question",
+      "items": {
+        "duration": {
+          "question": "How long does a project take?",
+          "answer": "[Typical ranges — e.g. a corporate website in 4–6 weeks, a custom system in 2–4 months.]"
+        },
+        "cost": {
+          "question": "How much will it cost?",
+          "answer": "[Explain how you estimate — fixed price per phase or monthly team — and what affects cost.]"
+        },
+        "support": {
+          "question": "Do you offer support after launch?",
+          "answer": "[Describe support plans: monitoring, updates and response times.]"
+        },
+        "existing": {
+          "question": "Can you work on an existing product?",
+          "answer": "[Explain how you audit and take over existing code.]"
+        }
+      }
+    }
+  },
+  "Projects": {
+    "metaTitle": "Projects",
+    "metaDescription": "Websites, apps and custom systems designed and built by Nexora Software Solutions.",
+    "header": {
+      "eyebrow": "Projects",
+      "title": "Products we’ve designed, built and launched.",
+      "description": "Each project lists the problem, what we built and the technologies behind it."
+    },
+    "filterLabel": "Filter projects by category",
+    "categories": {
+      "all": "All",
+      "website": "Website",
+      "mobileApp": "Mobile app",
+      "customSystem": "Custom system",
+      "uxui": "UX/UI"
+    },
+    "caseStudy": {
+      "eyebrow": "Case study",
+      "title": "[Client name]: [headline result]",
+      "imagePlaceholder": "[Case study cover image]",
+      "problemLabel": "Problem",
+      "problem": "[What wasn’t working for the client.]",
+      "solutionLabel": "Solution",
+      "solution": "[What Nexora designed and built.]",
+      "resultsLabel": "Results",
+      "results": "[Measured outcome after launch.]"
+    },
+    "empty": "No projects in this category yet."
+  },
+  "Products": {
+    "metaTitle": "Coming Soon",
+    "metaDescription": "Nexora’s own upcoming products and where each one stands today.",
+    "header": {
+      "eyebrow": "Coming soon",
+      "title": "What Nexora is building next.",
+      "description": "Our own products, from early idea to launch. Each one shows where it stands today."
+    },
+    "category": "Nexora product",
+    "statusLegend": "Status:",
+    "progressLabel": "{name} progress"
+  },
+  "Contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Send Nexora a message or tell us about your project to get a plan, timeline and estimate.",
+    "header": {
+      "eyebrow": "Contact",
+      "title": "Let’s talk about your project.",
+      "description": "Send a quick message, or tell us about your project and get a plan, timeline and estimate."
+    },
+    "info": {
+      "heading": "Contact details",
+      "email": "Email",
+      "phone": "Phone / WhatsApp",
+      "office": "Office",
+      "hours": "Working hours",
+      "social": "Follow us"
+    },
+    "tabs": {
+      "label": "Form type",
+      "project": "Start your project",
+      "message": "Send a message"
+    },
+    "fields": {
+      "projectType": "Project type",
+      "budget": "Estimated budget",
+      "timeline": "Timeline",
+      "description": "Project description",
+      "descriptionPlaceholder": "What are you building, for whom, and what should it do?",
+      "descriptionHint": "Links to examples or documents are welcome.",
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help?",
+      "message": "Message",
+      "selectPlaceholder": "Select an option",
+      "honeypot": "Leave this field empty"
+    },
+    "options": {
+      "projectType": {
+        "website": "Website",
+        "mobileApp": "Mobile app",
+        "customSystem": "Custom system",
+        "uxui": "UX/UI design",
+        "api": "API / integration",
+        "other": "Other"
+      },
+      "budget": {
+        "unsure": "Not sure yet",
+        "under5k": "Under $5,000",
+        "from5kTo15k": "$5,000 – $15,000",
+        "from15kTo40k": "$15,000 – $40,000",
+        "over40k": "$40,000+"
+      },
+      "timeline": {
+        "asap": "As soon as possible",
+        "oneToThreeMonths": "1–3 months",
+        "threeToSixMonths": "3–6 months",
+        "flexible": "Flexible"
+      }
+    },
+    "replyTime": "We reply within two working days.",
+    "submitProject": "Send project request",
+    "submitMessage": "Send message",
+    "submitting": "Sending…",
+    "success": {
+      "title": "Thanks — we’ve got it.",
+      "description": "We’ll reply to your email within two working days.",
+      "again": "Send another"
+    },
+    "submitError": "We couldn’t send your request. Please try again, or email us directly."
+  },
+  "Validation": {
+    "required": "This field is required.",
+    "email": "Please enter a valid email address.",
+    "url": "Please enter a full link starting with https://",
+    "tooShort": "Please write at least {limit} characters.",
+    "tooLong": "Please keep this under {limit} characters.",
+    "invalidOption": "Please choose one of the options.",
+    "number": "Please enter a whole number in the allowed range."
+  },
+  "CtaBand": {
+    "title": "Have an idea? Let’s turn it into a working product.",
+    "description": "Tell us what you need — we’ll reply with a clear plan, timeline and estimate.",
+    "primaryCta": "Start your project",
+    "secondaryCta": "Get in touch"
+  },
+  "ProductStatus": {
+    "planning": "Planning",
+    "development": "In development",
+    "beta": "Beta",
+    "launched": "Launched"
   },
   "Showcase": {
     "eyebrow": "Component Library",
@@ -90,6 +362,207 @@
       "messageLabel": "Project Details",
       "messagePlaceholder": "Tell us a bit about your project…",
       "submit": "Send Request"
+    }
+  },
+  "Dashboard": {
+    "metaTitle": "Dashboard",
+    "brand": "Nexora dashboard",
+    "nav": {
+      "label": "Dashboard",
+      "overview": "Overview",
+      "requests": "Project requests",
+      "messages": "Messages",
+      "projects": "Projects",
+      "services": "Services",
+      "comingSoon": "Coming soon",
+      "settings": "Settings",
+      "viewSite": "View site",
+      "signOut": "Sign out",
+      "role": "Admin"
+    },
+    "mockBanner": "Demo mode: sample data, reset when the server restarts.",
+    "login": {
+      "metaTitle": "Sign in",
+      "title": "Sign in to the dashboard",
+      "description": "For Nexora team members only.",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "devHint": "Demo login — email: {email} · password: {password}"
+    },
+    "common": {
+      "view": "View",
+      "edit": "Edit",
+      "save": "Save changes",
+      "saving": "Saving…",
+      "create": "Create",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "confirmDelete": "Yes, delete",
+      "deleteQuestion": "Delete this item? This can’t be undone.",
+      "back": "Back",
+      "apply": "Apply",
+      "clear": "Clear",
+      "search": "Search",
+      "all": "All",
+      "yes": "Yes",
+      "no": "No",
+      "actions": "Actions",
+      "published": "Published",
+      "draft": "Draft",
+      "featured": "Featured",
+      "english": "English",
+      "arabic": "Arabic",
+      "localizedLabel": "{field} ({language})",
+      "empty": "Nothing here yet.",
+      "noResults": "No results match these filters.",
+      "notFound": "This item doesn’t exist or was deleted."
+    },
+    "notices": {
+      "saved": "Changes saved.",
+      "created": "Created successfully.",
+      "deleted": "Deleted.",
+      "statusUpdated": "Status updated.",
+      "markedRead": "Marked as read.",
+      "markedUnread": "Marked as unread."
+    },
+    "errors": {
+      "generic": "Something went wrong. Please try again.",
+      "invalidCredentials": "Incorrect email or password.",
+      "fixFields": "Please fix the highlighted fields."
+    },
+    "overview": {
+      "title": "Overview",
+      "description": "What’s new since you last checked.",
+      "stats": {
+        "newRequests": "New requests",
+        "newRequestsHint": "Waiting for a first look",
+        "inReview": "In review",
+        "inReviewHint": "Awaiting a quote",
+        "unread": "Unread messages",
+        "unreadHint": "From the contact form",
+        "projects": "Published projects",
+        "projectsHint": "Visible on the site"
+      },
+      "latestRequests": "Latest requests",
+      "recentMessages": "Recent messages",
+      "viewAll": "View all",
+      "openInbox": "Open inbox",
+      "newCount": "{count} new"
+    },
+    "requests": {
+      "title": "Project requests",
+      "description": "Submissions from the Start your project form.",
+      "searchLabel": "Search requests",
+      "searchPlaceholder": "Name, email or description",
+      "statusFilter": "Status",
+      "export": "Export CSV",
+      "client": "Client / project",
+      "type": "Type",
+      "budget": "Budget",
+      "timeline": "Timeline",
+      "status": "Status",
+      "received": "Received",
+      "email": "Email",
+      "projectDescription": "Project description",
+      "updateStatus": "Update status",
+      "reply": "Reply by email",
+      "statuses": {
+        "new": "New",
+        "inReview": "In review",
+        "quoted": "Quoted",
+        "accepted": "Accepted",
+        "declined": "Declined"
+      }
+    },
+    "messages": {
+      "title": "Messages",
+      "description": "Submissions from the Send a message form.",
+      "filterLabel": "Show messages",
+      "unreadOnly": "Unread",
+      "from": "From",
+      "subject": "Subject",
+      "received": "Received",
+      "status": "Status",
+      "unread": "Unread",
+      "read": "Read",
+      "markRead": "Mark as read",
+      "markUnread": "Mark as unread",
+      "reply": "Reply by email",
+      "replySubject": "Re: {subject}"
+    },
+    "services": {
+      "title": "Services",
+      "description": "Shown on the home page and the Services page, in this order.",
+      "new": "New service",
+      "editTitle": "Edit service",
+      "newTitle": "New service",
+      "order": "Order",
+      "icon": "Icon",
+      "name": "Title",
+      "summary": "Description",
+      "features": "Features",
+      "featuresHint": "One per line. Shown as bullet points on the Services page.",
+      "publishedHint": "Unpublished services are hidden from the site.",
+      "icons": {
+        "code": "Code",
+        "system": "System",
+        "ux": "Design",
+        "api": "API",
+        "db": "Database",
+        "support": "Support"
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Your portfolio. Featured projects also appear on the home page.",
+      "new": "New project",
+      "editTitle": "Edit project",
+      "newTitle": "New project",
+      "name": "Title",
+      "summary": "Description",
+      "category": "Category",
+      "tags": "Technologies",
+      "tagsHint": "Comma-separated, e.g. Next.js, Node.js, PostgreSQL",
+      "featuredHint": "Show on the home page.",
+      "publishedHint": "Unpublished projects are hidden from the site."
+    },
+    "products": {
+      "title": "Coming soon",
+      "description": "Nexora’s own products and their progress.",
+      "new": "New product",
+      "editTitle": "Edit product",
+      "newTitle": "New product",
+      "name": "Title",
+      "summary": "Description",
+      "status": "Status",
+      "progress": "Progress (%)",
+      "progressHint": "A whole number from 0 to 100.",
+      "tags": "Technologies",
+      "tagsHint": "Comma-separated, e.g. React, MongoDB",
+      "featuredHint": "Show on the home page.",
+      "publishedHint": "Unpublished products are hidden from the site."
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Company details shown in the footer and on the Contact page.",
+      "contactSection": "Contact details",
+      "socialSection": "Social links",
+      "email": "Email",
+      "phone": "Phone / WhatsApp",
+      "address": "Office address",
+      "workingHours": "Working hours"
+    },
+    "csv": {
+      "received": "Received",
+      "name": "Name",
+      "email": "Email",
+      "type": "Type",
+      "budget": "Budget",
+      "timeline": "Timeline",
+      "status": "Status",
+      "description": "Description"
     }
   }
 }
