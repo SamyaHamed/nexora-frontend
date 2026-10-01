@@ -1,14 +1,16 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { listServices } from "@/features/services/api";
 import { ServiceCard } from "@/features/services/components/ServiceCard";
-import { services } from "@/features/services/data";
+import { pick } from "@/lib/localized";
 
 export async function ServicesSection() {
-  const [t, tServices] = await Promise.all([
+  const [t, locale, services] = await Promise.all([
     getTranslations("Home.services"),
-    getTranslations("Services.items"),
+    getLocale(),
+    listServices({ publishedOnly: true }),
   ]);
 
   return (
@@ -22,12 +24,12 @@ export async function ServicesSection() {
         />
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <li key={service.key}>
+            <li key={service.id}>
               <ServiceCard
                 icon={service.icon}
-                title={tServices(`${service.key}.title`)}
-                description={tServices(`${service.key}.description`)}
-                href={`/services#${service.key}`}
+                title={pick(service.title, locale)}
+                description={pick(service.description, locale)}
+                href={`/services#${service.id}`}
                 linkLabel={t("learnMore")}
               />
             </li>

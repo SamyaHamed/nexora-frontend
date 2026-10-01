@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
-import { getTranslations } from "next-intl/server";
-import { siteConfig } from "@/config/site";
+import { getLocale, getTranslations } from "next-intl/server";
+import { socialKeys } from "@/config/site";
+import { getSettings } from "@/features/settings/api";
+import { pick } from "@/lib/localized";
 
 const iconPaths = {
   email: "M4 4h16v16H4z M4 6l8 7 8-7",
@@ -43,11 +45,13 @@ const linkClass =
   "rounded-[var(--radius-sm)] underline-offset-4 hover:text-[color:var(--color-brand-text)] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-focus-outline)]";
 
 export async function ContactInfo() {
-  const [t, tSocial] = await Promise.all([
+  const [t, tSocial, locale, settings] = await Promise.all([
     getTranslations("Contact.info"),
     getTranslations("Social"),
+    getLocale(),
+    getSettings(),
   ]);
-  const { email, phone, address } = siteConfig.contact;
+  const { email, phone } = settings;
 
   return (
     <div className="flex flex-col gap-7">
@@ -64,24 +68,24 @@ export async function ContactInfo() {
           </a>
         </InfoItem>
         <InfoItem icon="office" label={t("office")}>
-          {address}
+          {pick(settings.address, locale)}
         </InfoItem>
         <InfoItem icon="hours" label={t("hours")}>
-          {t("hoursValue")}
+          {pick(settings.workingHours, locale)}
         </InfoItem>
       </dl>
       <div className="border-t border-[color:var(--color-border-subtle)] pt-6">
         <h3 className="sr-only">{t("social")}</h3>
         <ul className="flex flex-wrap gap-3">
-          {siteConfig.social.map((social) => (
-            <li key={social.key}>
+          {socialKeys.map((key) => (
+            <li key={key}>
               <a
-                href={social.href}
+                href={settings.social[key]}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex h-11 items-center rounded-[var(--radius-md)] border border-[color:var(--color-border)] px-4 text-sm font-medium text-[color:var(--color-text-primary)] transition-colors hover:bg-[color:var(--color-surface-hover)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--color-focus-outline)]"
               >
-                {tSocial(social.key)}
+                {tSocial(key)}
               </a>
             </li>
           ))}

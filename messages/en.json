@@ -175,62 +175,6 @@
           "answer": "[Explain how you audit and take over existing code.]"
         }
       }
-    },
-    "items": {
-      "web": {
-        "title": "Website & app development",
-        "description": "Fast, responsive websites and mobile apps built with React, Next.js and Node.js.",
-        "features": {
-          "f1": "Marketing and corporate websites",
-          "f2": "Web apps and customer portals",
-          "f3": "iOS and Android apps"
-        }
-      },
-      "systems": {
-        "title": "Custom systems",
-        "description": "Internal tools, portals and dashboards shaped around how your team actually works.",
-        "features": {
-          "f1": "Admin dashboards",
-          "f2": "Booking, inventory and CRM tools",
-          "f3": "Role-based permissions"
-        }
-      },
-      "ux": {
-        "title": "UX/UI design",
-        "description": "Research-led interfaces that are clear, accessible and true to your brand.",
-        "features": {
-          "f1": "User research and flows",
-          "f2": "Wireframes and prototypes",
-          "f3": "Design systems"
-        }
-      },
-      "api": {
-        "title": "APIs & integrations",
-        "description": "Documented REST APIs that connect your products, payments and third-party services.",
-        "features": {
-          "f1": "REST API design and docs",
-          "f2": "Payment and SMS integrations",
-          "f3": "Authentication with JWT"
-        }
-      },
-      "db": {
-        "title": "Databases",
-        "description": "Well-structured PostgreSQL and MongoDB data models that stay fast as you grow.",
-        "features": {
-          "f1": "PostgreSQL and MongoDB",
-          "f2": "Data modelling and migrations",
-          "f3": "Backups and performance"
-        }
-      },
-      "support": {
-        "title": "Support & maintenance",
-        "description": "Monitoring, backups, updates and a team that answers when something needs fixing.",
-        "features": {
-          "f1": "Hosting, HTTPS and monitoring",
-          "f2": "Security updates",
-          "f3": "Feature improvements"
-        }
-      }
     }
   },
   "Projects": {
@@ -249,32 +193,6 @@
       "customSystem": "Custom system",
       "uxui": "UX/UI"
     },
-    "items": {
-      "p1": {
-        "title": "[Project name]",
-        "description": "[One-line summary and result.]"
-      },
-      "p2": {
-        "title": "[Project name]",
-        "description": "[One-line summary and result.]"
-      },
-      "p3": {
-        "title": "[Project name]",
-        "description": "[One-line summary and result.]"
-      },
-      "p4": {
-        "title": "[Project name]",
-        "description": "[One-line summary and result.]"
-      },
-      "p5": {
-        "title": "[Project name]",
-        "description": "[One-line summary and result.]"
-      },
-      "p6": {
-        "title": "[Project name]",
-        "description": "[One-line summary and result.]"
-      }
-    },
     "caseStudy": {
       "eyebrow": "Case study",
       "title": "[Client name]: [headline result]",
@@ -285,7 +203,8 @@
       "solution": "[What Nexora designed and built.]",
       "resultsLabel": "Results",
       "results": "[Measured outcome after launch.]"
-    }
+    },
+    "empty": "No projects in this category yet."
   },
   "Products": {
     "metaTitle": "Coming Soon",
@@ -297,25 +216,7 @@
     },
     "category": "Nexora product",
     "statusLegend": "Status:",
-    "progressLabel": "{name} progress",
-    "items": {
-      "u1": {
-        "title": "[Product name]",
-        "description": "[What it does and who it’s for — one sentence.]"
-      },
-      "u2": {
-        "title": "[Product name]",
-        "description": "[What it does and who it’s for — one sentence.]"
-      },
-      "u3": {
-        "title": "[Product name]",
-        "description": "[What it does and who it’s for — one sentence.]"
-      },
-      "u4": {
-        "title": "[Product name]",
-        "description": "[What it does and who it’s for — one sentence.]"
-      }
-    }
+    "progressLabel": "{name} progress"
   },
   "Contact": {
     "metaTitle": "Contact",
@@ -331,7 +232,6 @@
       "phone": "Phone / WhatsApp",
       "office": "Office",
       "hours": "Working hours",
-      "hoursValue": "[Sun–Thu, 9:00–17:00]",
       "social": "Follow us"
     },
     "tabs": {
@@ -383,19 +283,21 @@
     "submitProject": "Send project request",
     "submitMessage": "Send message",
     "submitting": "Sending…",
-    "errors": {
-      "required": "This field is required.",
-      "email": "Please enter a valid email address.",
-      "tooShort": "Please write at least {limit} characters.",
-      "tooLong": "Please keep this under {limit} characters.",
-      "invalidOption": "Please choose one of the options.",
-      "submit": "We couldn’t send your request. Please try again, or email us directly."
-    },
     "success": {
       "title": "Thanks — we’ve got it.",
       "description": "We’ll reply to your email within two working days.",
       "again": "Send another"
-    }
+    },
+    "submitError": "We couldn’t send your request. Please try again, or email us directly."
+  },
+  "Validation": {
+    "required": "This field is required.",
+    "email": "Please enter a valid email address.",
+    "url": "Please enter a full link starting with https://",
+    "tooShort": "Please write at least {limit} characters.",
+    "tooLong": "Please keep this under {limit} characters.",
+    "invalidOption": "Please choose one of the options.",
+    "number": "Please enter a whole number in the allowed range."
   },
   "CtaBand": {
     "title": "Have an idea? Let’s turn it into a working product.",
@@ -460,6 +362,206 @@
       "messageLabel": "Project Details",
       "messagePlaceholder": "Tell us a bit about your project…",
       "submit": "Send Request"
+    }
+  },
+  "Dashboard": {
+    "metaTitle": "Dashboard",
+    "brand": "Nexora dashboard",
+    "nav": {
+      "label": "Dashboard",
+      "overview": "Overview",
+      "requests": "Project requests",
+      "messages": "Messages",
+      "projects": "Projects",
+      "services": "Services",
+      "comingSoon": "Coming soon",
+      "settings": "Settings",
+      "viewSite": "View site",
+      "signOut": "Sign out",
+      "role": "Admin"
+    },
+    "mockBanner": "Demo mode: sample data, reset when the server restarts.",
+    "login": {
+      "metaTitle": "Sign in",
+      "title": "Sign in to the dashboard",
+      "description": "For Nexora team members only.",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "devHint": "Demo login — email: {email} · password: {password}"
+    },
+    "common": {
+      "view": "View",
+      "edit": "Edit",
+      "save": "Save changes",
+      "saving": "Saving…",
+      "create": "Create",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "confirmDelete": "Yes, delete",
+      "deleteQuestion": "Delete this item? This can’t be undone.",
+      "back": "Back",
+      "apply": "Apply",
+      "clear": "Clear",
+      "search": "Search",
+      "all": "All",
+      "yes": "Yes",
+      "no": "No",
+      "actions": "Actions",
+      "published": "Published",
+      "draft": "Draft",
+      "featured": "Featured",
+      "english": "English",
+      "arabic": "Arabic",
+      "localizedLabel": "{field} ({language})",
+      "empty": "Nothing here yet.",
+      "noResults": "No results match these filters.",
+      "notFound": "This item doesn’t exist or was deleted."
+    },
+    "notices": {
+      "saved": "Changes saved.",
+      "created": "Created successfully.",
+      "deleted": "Deleted.",
+      "statusUpdated": "Status updated.",
+      "markedRead": "Marked as read.",
+      "markedUnread": "Marked as unread."
+    },
+    "errors": {
+      "generic": "Something went wrong. Please try again.",
+      "invalidCredentials": "Incorrect email or password.",
+      "fixFields": "Please fix the highlighted fields."
+    },
+    "overview": {
+      "title": "Overview",
+      "description": "What’s new since you last checked.",
+      "stats": {
+        "newRequests": "New requests",
+        "newRequestsHint": "Waiting for a first look",
+        "inReview": "In review",
+        "inReviewHint": "Awaiting a quote",
+        "unread": "Unread messages",
+        "unreadHint": "From the contact form",
+        "projects": "Published projects",
+        "projectsHint": "Visible on the site"
+      },
+      "latestRequests": "Latest requests",
+      "recentMessages": "Recent messages",
+      "viewAll": "View all",
+      "openInbox": "Open inbox",
+      "newCount": "{count} new"
+    },
+    "requests": {
+      "title": "Project requests",
+      "description": "Submissions from the Start your project form.",
+      "searchLabel": "Search requests",
+      "searchPlaceholder": "Name, email or description",
+      "statusFilter": "Status",
+      "export": "Export CSV",
+      "client": "Client / project",
+      "type": "Type",
+      "budget": "Budget",
+      "timeline": "Timeline",
+      "status": "Status",
+      "received": "Received",
+      "email": "Email",
+      "projectDescription": "Project description",
+      "updateStatus": "Update status",
+      "reply": "Reply by email",
+      "statuses": {
+        "new": "New",
+        "inReview": "In review",
+        "quoted": "Quoted",
+        "accepted": "Accepted",
+        "declined": "Declined"
+      }
+    },
+    "messages": {
+      "title": "Messages",
+      "description": "Submissions from the Send a message form.",
+      "filterLabel": "Show messages",
+      "unreadOnly": "Unread",
+      "from": "From",
+      "subject": "Subject",
+      "received": "Received",
+      "status": "Status",
+      "unread": "Unread",
+      "read": "Read",
+      "markRead": "Mark as read",
+      "markUnread": "Mark as unread",
+      "reply": "Reply by email"
+    },
+    "services": {
+      "title": "Services",
+      "description": "Shown on the home page and the Services page, in this order.",
+      "new": "New service",
+      "editTitle": "Edit service",
+      "newTitle": "New service",
+      "order": "Order",
+      "icon": "Icon",
+      "name": "Title",
+      "summary": "Description",
+      "features": "Features",
+      "featuresHint": "One per line. Shown as bullet points on the Services page.",
+      "publishedHint": "Unpublished services are hidden from the site.",
+      "icons": {
+        "code": "Code",
+        "system": "System",
+        "ux": "Design",
+        "api": "API",
+        "db": "Database",
+        "support": "Support"
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Your portfolio. Featured projects also appear on the home page.",
+      "new": "New project",
+      "editTitle": "Edit project",
+      "newTitle": "New project",
+      "name": "Title",
+      "summary": "Description",
+      "category": "Category",
+      "tags": "Technologies",
+      "tagsHint": "Comma-separated, e.g. Next.js, Node.js, PostgreSQL",
+      "featuredHint": "Show on the home page.",
+      "publishedHint": "Unpublished projects are hidden from the site."
+    },
+    "products": {
+      "title": "Coming soon",
+      "description": "Nexora’s own products and their progress.",
+      "new": "New product",
+      "editTitle": "Edit product",
+      "newTitle": "New product",
+      "name": "Title",
+      "summary": "Description",
+      "status": "Status",
+      "progress": "Progress (%)",
+      "progressHint": "A whole number from 0 to 100.",
+      "tags": "Technologies",
+      "tagsHint": "Comma-separated, e.g. React, MongoDB",
+      "featuredHint": "Show on the home page.",
+      "publishedHint": "Unpublished products are hidden from the site."
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Company details shown in the footer and on the Contact page.",
+      "contactSection": "Contact details",
+      "socialSection": "Social links",
+      "email": "Email",
+      "phone": "Phone / WhatsApp",
+      "address": "Office address",
+      "workingHours": "Working hours"
+    },
+    "csv": {
+      "received": "Received",
+      "name": "Name",
+      "email": "Email",
+      "type": "Type",
+      "budget": "Budget",
+      "timeline": "Timeline",
+      "status": "Status",
+      "description": "Description"
     }
   }
 }

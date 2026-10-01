@@ -1,18 +1,24 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowIcon } from "@/components/ui/ArrowIcon";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { listProjects } from "@/features/projects/api";
 import { ProjectCard } from "@/features/projects/components/ProjectCard";
-import { projects } from "@/features/projects/data";
+import { pick } from "@/lib/localized";
+
+const MAX_FEATURED = 3;
 
 export async function FeaturedProjectsSection() {
-  const [t, tProjects] = await Promise.all([
+  const [t, tProjects, locale, projects] = await Promise.all([
     getTranslations("Home.projects"),
     getTranslations("Projects"),
+    getLocale(),
+    listProjects({ publishedOnly: true }),
   ]);
-  const featuredProjects = projects.filter((project) => project.featured);
+  const featured = projects.filter((project) => project.featured).slice(0, MAX_FEATURED);
+  if (featured.length === 0) return null;
 
   return (
     <Section>
@@ -24,12 +30,12 @@ export async function FeaturedProjectsSection() {
           </Button>
         </div>
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredProjects.map((project) => (
-            <li key={project.key}>
+          {featured.map((project) => (
+            <li key={project.id}>
               <ProjectCard
                 category={tProjects(`categories.${project.category}`)}
-                title={tProjects(`items.${project.key}.title`)}
-                description={tProjects(`items.${project.key}.description`)}
+                title={pick(project.title, locale)}
+                description={pick(project.description, locale)}
                 tags={project.tags}
               />
             </li>

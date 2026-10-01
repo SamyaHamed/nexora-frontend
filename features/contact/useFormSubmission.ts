@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { HONEYPOT_FIELD, type FieldErrors, type ValidationResult } from "./schema";
+import { focusFirstInvalid } from "@/lib/focus-first-invalid";
+import type { FieldErrors, ValidationResult } from "@/lib/validation";
+import { HONEYPOT_FIELD } from "./schema";
 
 export type SubmissionStatus = "idle" | "submitting" | "success" | "error";
 
@@ -11,7 +13,7 @@ export function useFormSubmission<T>(
   send: (data: T) => Promise<unknown>,
 ) {
   const [status, setStatus] = useState<SubmissionStatus>("idle");
-  const [errors, setErrors] = useState<FieldErrors<T>>({});
+  const [errors, setErrors] = useState<FieldErrors>({});
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -50,17 +52,4 @@ export function useFormSubmission<T>(
   }
 
   return { status, errors, handleSubmit, reset };
-}
-
-function focusFirstInvalid(form: HTMLFormElement, names: string[]) {
-  for (const element of Array.from(form.elements)) {
-    if (
-      element instanceof HTMLElement &&
-      "name" in element &&
-      names.includes(String(element.name))
-    ) {
-      element.focus();
-      return;
-    }
-  }
 }

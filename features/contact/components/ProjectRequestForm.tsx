@@ -6,15 +6,16 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
+import { useValidationMessage } from "@/lib/use-validation-message";
 import { submitProjectRequest } from "../api";
 import { validateProjectRequest } from "../schema";
 import { budgets, projectTypes, timelines } from "../types";
 import { useFormSubmission } from "../useFormSubmission";
-import { HoneypotField, SubmitError, SubmitSuccess, useErrorMessage } from "./FormParts";
+import { HoneypotField, SubmitError, SubmitSuccess } from "./FormParts";
 
 export function ProjectRequestForm() {
   const t = useTranslations("Contact");
-  const errorMessage = useErrorMessage();
+  const errorMessage = useValidationMessage();
   const { status, errors, handleSubmit, reset } = useFormSubmission(
     validateProjectRequest,
     submitProjectRequest,
@@ -32,7 +33,7 @@ export function ProjectRequestForm() {
           label={t("fields.projectType")}
           placeholder={t("fields.selectPlaceholder")}
           options={projectTypes.map((value) => ({ value, label: t(`options.projectType.${value}`) }))}
-          error={errorMessage(errors.projectType)}
+          error={errorMessage(errors, "projectType")}
           required
         />
         <Select
@@ -40,7 +41,7 @@ export function ProjectRequestForm() {
           label={t("fields.budget")}
           placeholder={t("fields.selectPlaceholder")}
           options={budgets.map((value) => ({ value, label: t(`options.budget.${value}`) }))}
-          error={errorMessage(errors.budget)}
+          error={errorMessage(errors, "budget")}
           required
         />
       </div>
@@ -49,7 +50,7 @@ export function ProjectRequestForm() {
         label={t("fields.timeline")}
         placeholder={t("fields.selectPlaceholder")}
         options={timelines.map((value) => ({ value, label: t(`options.timeline.${value}`) }))}
-        error={errorMessage(errors.timeline)}
+        error={errorMessage(errors, "timeline")}
         required
       />
       <Textarea
@@ -58,7 +59,7 @@ export function ProjectRequestForm() {
         label={t("fields.description")}
         placeholder={t("fields.descriptionPlaceholder")}
         helperText={t("fields.descriptionHint")}
-        error={errorMessage(errors.description)}
+        error={errorMessage(errors, "description")}
         required
       />
       <div className="grid gap-5 sm:grid-cols-2">
@@ -67,7 +68,7 @@ export function ProjectRequestForm() {
           autoComplete="name"
           label={t("fields.name")}
           placeholder={t("fields.namePlaceholder")}
-          error={errorMessage(errors.name)}
+          error={errorMessage(errors, "name")}
           required
         />
         <Input
@@ -77,7 +78,7 @@ export function ProjectRequestForm() {
           dir="ltr"
           label={t("fields.email")}
           placeholder={t("fields.emailPlaceholder")}
-          error={errorMessage(errors.email)}
+          error={errorMessage(errors, "email")}
           required
         />
       </div>

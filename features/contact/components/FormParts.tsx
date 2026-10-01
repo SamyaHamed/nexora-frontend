@@ -3,14 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
-import { HONEYPOT_FIELD, type ValidationError } from "../schema";
-
-/** Turns a validation error into its localized message. */
-export function useErrorMessage() {
-  const t = useTranslations("Contact.errors");
-  return (error: ValidationError | undefined) =>
-    error ? t(error.code, { limit: error.limit ?? 0 }) : undefined;
-}
+import { HONEYPOT_FIELD } from "../schema";
 
 /** Off-screen spam trap. Hidden from people and assistive tech alike. */
 export function HoneypotField() {
@@ -26,13 +19,13 @@ export function HoneypotField() {
 }
 
 export function SubmitError() {
-  const t = useTranslations("Contact.errors");
+  const t = useTranslations("Contact");
   return (
     <p
       role="alert"
       className="rounded-[var(--radius-md)] border border-[color:var(--color-danger)]/30 bg-[color:var(--color-danger)]/5 px-4 py-3 text-sm font-medium text-[color:var(--color-danger)]"
     >
-      {t("submit")}
+      {t("submitError")}
     </p>
   );
 }

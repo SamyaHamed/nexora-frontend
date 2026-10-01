@@ -4,14 +4,15 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
+import { useValidationMessage } from "@/lib/use-validation-message";
 import { submitContactMessage } from "../api";
 import { validateContactMessage } from "../schema";
 import { useFormSubmission } from "../useFormSubmission";
-import { HoneypotField, SubmitError, SubmitSuccess, useErrorMessage } from "./FormParts";
+import { HoneypotField, SubmitError, SubmitSuccess } from "./FormParts";
 
 export function ContactMessageForm() {
   const t = useTranslations("Contact");
-  const errorMessage = useErrorMessage();
+  const errorMessage = useValidationMessage();
   const { status, errors, handleSubmit, reset } = useFormSubmission(
     validateContactMessage,
     submitContactMessage,
@@ -29,7 +30,7 @@ export function ContactMessageForm() {
           autoComplete="name"
           label={t("fields.name")}
           placeholder={t("fields.namePlaceholder")}
-          error={errorMessage(errors.name)}
+          error={errorMessage(errors, "name")}
           required
         />
         <Input
@@ -39,7 +40,7 @@ export function ContactMessageForm() {
           dir="ltr"
           label={t("fields.email")}
           placeholder={t("fields.emailPlaceholder")}
-          error={errorMessage(errors.email)}
+          error={errorMessage(errors, "email")}
           required
         />
       </div>
@@ -47,14 +48,14 @@ export function ContactMessageForm() {
         name="subject"
         label={t("fields.subject")}
         placeholder={t("fields.subjectPlaceholder")}
-        error={errorMessage(errors.subject)}
+        error={errorMessage(errors, "subject")}
         required
       />
       <Textarea
         name="message"
         rows={6}
         label={t("fields.message")}
-        error={errorMessage(errors.message)}
+        error={errorMessage(errors, "message")}
         required
       />
       <HoneypotField />

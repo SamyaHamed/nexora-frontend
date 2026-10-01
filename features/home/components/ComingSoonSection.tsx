@@ -1,31 +1,37 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowIcon } from "@/components/ui/ArrowIcon";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { listProducts } from "@/features/products/api";
 import { ProjectCard } from "@/features/projects/components/ProjectCard";
 import { Link } from "@/i18n/navigation";
-import { products } from "@/features/products/data";
+import { pick } from "@/lib/localized";
+
+const MAX_FEATURED = 2;
 
 export async function ComingSoonSection() {
-  const [t, tProducts, tStatus] = await Promise.all([
+  const [t, tProducts, tStatus, locale, products] = await Promise.all([
     getTranslations("Home.comingSoon"),
     getTranslations("Products"),
     getTranslations("ProductStatus"),
+    getLocale(),
+    listProducts({ publishedOnly: true }),
   ]);
-  const featuredProducts = products.filter((product) => product.featured);
+  const featured = products.filter((product) => product.featured).slice(0, MAX_FEATURED);
+  if (featured.length === 0) return null;
 
   return (
     <Section className="border-y border-[color:var(--color-border-subtle)] bg-[color:var(--color-surface)]">
       <Container>
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
         <ul className="mt-12 grid gap-6 md:grid-cols-2">
-          {featuredProducts.map((product) => (
-            <li key={product.key}>
+          {featured.map((product) => (
+            <li key={product.id}>
               <ProjectCard
                 category={tProducts("category")}
-                title={tProducts(`items.${product.key}.title`)}
-                description={tProducts(`items.${product.key}.description`)}
+                title={pick(product.title, locale)}
+                description={pick(product.description, locale)}
                 tags={product.tags}
                 status={product.status}
                 statusLabel={tStatus(product.status)}

@@ -1,15 +1,18 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { products } from "../data";
+import { pick } from "@/lib/localized";
+import { listProducts } from "../api";
 import { productStatuses } from "../types";
 import { ProductRow } from "./ProductRow";
 import { StatusBadge } from "./StatusBadge";
 
 export async function ProductList() {
-  const [t, tStatus] = await Promise.all([
+  const [t, tStatus, locale, products] = await Promise.all([
     getTranslations("Products"),
     getTranslations("ProductStatus"),
+    getLocale(),
+    listProducts({ publishedOnly: true }),
   ]);
 
   return (
@@ -28,12 +31,12 @@ export async function ProductList() {
         </div>
         <ul className="flex flex-col gap-4">
           {products.map((product) => {
-            const title = t(`items.${product.key}.title`);
+            const title = pick(product.title, locale);
             return (
-              <li key={product.key}>
+              <li key={product.id}>
                 <ProductRow
                   title={title}
-                  description={t(`items.${product.key}.description`)}
+                  description={pick(product.description, locale)}
                   status={product.status}
                   statusLabel={tStatus(product.status)}
                   progress={product.progress}
