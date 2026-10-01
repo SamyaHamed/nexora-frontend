@@ -56,7 +56,7 @@ export function MobileMenu({
         aria-expanded={open}
         aria-controls={panelId}
         aria-label={openLabel}
-        className="inline-flex size-10 items-center justify-center rounded-[var(--radius-md)] text-[color:var(--color-text-primary)] transition-colors hover:bg-[color:var(--color-surface)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-bg)]"
+        className="inline-flex size-10 items-center justify-center rounded-[var(--radius-md)] text-[color:var(--color-text-primary)] transition-colors hover:bg-[color:var(--color-surface-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-bg)]"
       >
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className="size-6">
           <path
@@ -82,7 +82,7 @@ export function MobileMenu({
               type="button"
               onClick={() => setOpen(false)}
               aria-label={closeLabel}
-              className="inline-flex size-10 items-center justify-center rounded-[var(--radius-md)] text-[color:var(--color-text-primary)] transition-colors hover:bg-[color:var(--color-surface)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-bg)]"
+              className="inline-flex size-10 items-center justify-center rounded-[var(--radius-md)] text-[color:var(--color-text-primary)] transition-colors hover:bg-[color:var(--color-surface-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-bg)]"
             >
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" className="size-6">
                 <path

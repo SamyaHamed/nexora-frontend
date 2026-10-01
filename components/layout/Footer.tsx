@@ -62,11 +62,11 @@ export async function Footer() {
   ];
 
   return (
-    <footer className="border-t border-[color:var(--color-border-subtle)] bg-[color:var(--color-surface)]">
+    <footer className="theme-dark border-t border-[color:var(--color-border-subtle)]">
       <Container className="flex flex-col gap-12 py-12 lg:py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
-            <Logo />
+            <Logo onDark />
             <p className="max-w-xs text-sm text-[color:var(--color-text-muted)]">
               {tFooter("tagline")}
             </p>
@@ -80,7 +80,7 @@ export async function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={tSocial(social.key)}
-                    className="inline-flex size-9 items-center justify-center rounded-full border border-[color:var(--color-border)] text-[color:var(--color-text-muted)] transition-colors hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-surface)]"
+                    className="inline-flex size-9 items-center justify-center rounded-full border border-[color:var(--color-border)] text-[color:var(--color-text-muted)] transition-colors hover:border-[color:var(--color-brand)] hover:text-[color:var(--color-brand)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-bg)]"
                   >
                     <Icon className="size-4" />
                   </a>

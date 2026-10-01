@@ -3,21 +3,36 @@ import { cn } from "@/lib/utils";
 
 export type CardProps = ComponentPropsWithoutRef<"div"> & {
   image?: ReactNode;
+  /** Classes for the media slot; defaults to a 16:9 frame. */
+  mediaClassName?: string;
+  /** Lift on hover — use when the card (or a link inside it) is clickable. */
+  interactive?: boolean;
 };
 
-export function Card({ image, className, children, ...props }: CardProps) {
+export function Card({
+  image,
+  mediaClassName,
+  interactive = false,
+  className,
+  children,
+  ...props
+}: CardProps) {
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-[var(--radius-lg)] border border-[color:var(--color-border-subtle)] bg-[color:var(--color-card)] shadow-[var(--shadow-sm)] transition-all hover:-translate-y-0.5 hover:border-[color:var(--color-border)] hover:shadow-[var(--shadow-md)]",
+        "flex flex-col overflow-hidden rounded-[var(--radius-lg)] border border-[color:var(--color-border-card)] bg-[color:var(--color-card)] shadow-[var(--shadow-md)]",
+        interactive &&
+          "transition-[box-shadow,translate] duration-[var(--duration-normal)] ease-[var(--ease-standard)] hover:-translate-y-0.5 hover:shadow-[var(--shadow-lg)] motion-reduce:hover:translate-y-0",
         className,
       )}
       {...props}
     >
       {image ? (
-        <div className="aspect-video w-full overflow-hidden">{image}</div>
+        <div className={cn("relative w-full overflow-hidden", mediaClassName ?? "aspect-video")}>
+          {image}
+        </div>
       ) : null}
-      <div className="p-6">{children}</div>
+      <div className="flex flex-1 flex-col p-6">{children}</div>
     </div>
   );
 }

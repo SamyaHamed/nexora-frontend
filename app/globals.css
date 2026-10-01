@@ -1,91 +1,185 @@
 @import "tailwindcss";
 
+/* Nexora theme — source: nexora-theme.json (light canvas, orange accent) */
 @theme {
-  /* Brand (orange) scale — #F97316 is the 500 step */
-  --color-brand-50: #fff7ed;
-  --color-brand-100: #ffedd5;
-  --color-brand-200: #fed7aa;
-  --color-brand-300: #fdba74;
-  --color-brand-400: #fb923c;
-  --color-brand-500: #f97316;
-  --color-brand-600: #ea580c;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a3412;
-  --color-brand-900: #7c2d12;
-  --color-brand-950: #431407;
+  /* Brand (orange) — sampled from the N mark; #FC780E is the 500 step */
+  --color-brand-50: #fff4ea;
+  --color-brand-100: #ffe6d1;
+  --color-brand-400: #fe8d12;
+  --color-brand-500: #fc780e;
+  --color-brand-600: #fe6408;
+  --color-brand-700: #e84e00;
 
-  /* Ink (dark neutral) scale */
-  --color-ink-50: #f7f7f8;
-  --color-ink-100: #eceef0;
-  --color-ink-200: #d5d9df;
-  --color-ink-300: #b1b8c2;
-  --color-ink-400: #848d9c;
-  --color-ink-500: #5f6773;
-  --color-ink-600: #454b56;
-  --color-ink-700: #333842;
-  --color-ink-800: #22262e;
-  --color-ink-900: #16181e;
-  --color-ink-950: #0c0d11;
+  /* Ink (charcoal + neutral grays) */
+  --color-ink-0: #ffffff;
+  --color-ink-25: #fafafa;
+  --color-ink-50: #f7f7f7;
+  --color-ink-100: #efefef;
+  --color-ink-150: #e7e7e7;
+  --color-ink-200: #dddddd;
+  --color-ink-400: #9a9a9a;
+  --color-ink-600: #5f5f5f;
+  --color-ink-700: #2b2b2b;
+  --color-ink-800: #1f1f1f;
+  --color-ink-900: #111111;
 
   /* Semantic surface & text tokens */
-  --color-bg: var(--color-ink-950);
-  --color-surface: var(--color-ink-900);
-  --color-card: var(--color-ink-800);
-  --color-border: var(--color-ink-600);
-  --color-border-subtle: var(--color-ink-800);
-  --color-text-primary: var(--color-ink-50);
-  --color-text-muted: var(--color-ink-300);
+  --color-bg: var(--color-ink-0);
+  --color-surface: var(--color-ink-25);
+  --color-surface-hover: var(--color-ink-50);
+  --color-card: var(--color-ink-0);
+  --color-border: var(--color-ink-200);
+  --color-border-subtle: var(--color-ink-150);
+  --color-border-card: var(--color-ink-100);
+  --color-text-primary: var(--color-ink-900);
+  --color-text-muted: var(--color-ink-600);
   --color-text-subtle: var(--color-ink-400);
+
+  /* Dark sections (use sparingly, never as the dominant background) */
+  --color-inverse-bg: var(--color-ink-900);
+  --color-inverse-hover: var(--color-ink-700);
+  --color-inverse-text: var(--color-ink-0);
 
   /* Semantic accent tokens */
   --color-brand: var(--color-brand-500);
-  --color-brand-hover: var(--color-brand-400);
-  --color-on-brand: var(--color-ink-950);
-  --color-link: var(--color-brand-400);
-  --color-success: #4ade80;
-  --color-danger: #f87171;
-  --color-warning: #fbbf24;
-  --color-info: #38bdf8;
+  --color-brand-hover: var(--color-brand-700);
+  /* Darker orange for small text on white (passes 4.5:1) */
+  --color-brand-text: #b54000;
+  --color-brand-soft: rgba(252, 120, 14, 0.12);
+  --color-on-brand: var(--color-ink-0);
+  --color-link: var(--color-brand-text);
+  --color-focus-outline: var(--color-brand-700);
+  --color-focus-ring: rgba(252, 120, 14, 0.28);
+  --color-success: #067647;
+  --color-danger: #b42318;
+  --color-warning: #b45309;
+  --color-info: #0369a1;
+
+  /* Typography */
+  --text-4xl: 2.375rem;
+  --text-4xl--line-height: 1.2;
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1.1;
+  --text-6xl: 4rem;
+  --text-6xl--line-height: 1.1;
+  --tracking-display: -0.03em;
+  --tracking-heading: -0.015em;
+  --tracking-eyebrow: 0.16em;
 
   /* Radius */
-  --radius-sm: 0.375rem;
-  --radius-md: 0.625rem;
-  --radius-lg: 1rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.125rem;
   --radius-xl: 1.5rem;
 
-  /* Shadows (tuned for a dark surface, not white) */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 0 1px rgba(249, 115, 22, 0.4), 0 8px 24px rgba(249, 115, 22, 0.25);
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(17, 17, 17, 0.06);
+  --shadow-md: 0 8px 24px rgba(17, 17, 17, 0.08);
+  --shadow-lg: 0 18px 48px rgba(17, 17, 17, 0.12);
+  --shadow-accent: 0 12px 32px rgba(252, 120, 14, 0.22);
+  --shadow-focus: 0 0 0 4px rgba(252, 120, 14, 0.14);
+
+  /* Gradients */
+  --gradient-logo: linear-gradient(135deg, #fea11f 0%, #fc780e 42%, #f45100 68%, #ffaa1b 100%);
+  --gradient-accent-soft: linear-gradient(135deg, rgba(252, 120, 14, 0.12) 0%, rgba(255, 255, 255, 0) 72%);
+  --gradient-hero-glow: radial-gradient(circle, rgba(252, 120, 14, 0.18) 0%, rgba(252, 120, 14, 0) 70%);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 450ms;
 
   /* Layout */
-  --container-width: 80rem;
+  --container-width: 75rem;
 }
 
 @theme inline {
   --font-sans: var(--font-sans-active);
+  --font-display: var(--font-display-active);
   --font-arabic: var(--font-ibm-plex-sans-arabic);
   --font-latin: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+/*
+ * Dark sections (CTA band, footer). Re-points the semantic tokens for a
+ * subtree, so every component inside follows without dark: variants.
+ */
+.theme-dark {
+  --color-bg: var(--color-ink-900);
+  --color-surface: var(--color-ink-800);
+  --color-surface-hover: #252525;
+  --color-card: var(--color-ink-800);
+  --color-border: var(--color-ink-600);
+  --color-border-subtle: var(--color-ink-700);
+  --color-border-card: var(--color-ink-700);
+  --color-text-primary: var(--color-ink-0);
+  --color-text-muted: #bdbdbd;
+  --color-text-subtle: var(--color-ink-400);
+  --color-brand-hover: var(--color-brand-400);
+  --color-brand-text: var(--color-brand-400);
+  --color-brand-soft: rgba(252, 120, 14, 0.16);
+  --color-on-brand: var(--color-ink-900);
+  --color-link: var(--color-brand-400);
+  --color-focus-outline: var(--color-brand-400);
+  --color-inverse-bg: var(--color-ink-0);
+  --color-inverse-hover: var(--color-ink-100);
+  --color-inverse-text: var(--color-ink-900);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.55);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  color-scheme: dark;
 }
 
 :root {
   --font-sans-active: var(--font-inter), var(--font-ibm-plex-sans-arabic),
-    ui-sans-serif, system-ui, sans-serif;
+    Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-display-active: var(--font-manrope), var(--font-inter),
+    var(--font-ibm-plex-sans-arabic), Arial, ui-sans-serif, sans-serif;
 }
 
 :lang(ar) {
   --font-sans-active: var(--font-ibm-plex-sans-arabic), var(--font-inter),
-    ui-sans-serif, system-ui, sans-serif;
+    Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-display-active: var(--font-ibm-plex-sans-arabic), var(--font-manrope),
+    var(--font-inter), Arial, ui-sans-serif, sans-serif;
 }
 
 :lang(en) {
   --font-sans-active: var(--font-inter), var(--font-ibm-plex-sans-arabic),
-    ui-sans-serif, system-ui, sans-serif;
+    Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-display-active: var(--font-manrope), var(--font-inter),
+    var(--font-ibm-plex-sans-arabic), Arial, ui-sans-serif, sans-serif;
 }
 
-body {
-  background: var(--color-bg);
-  color: var(--color-text-primary);
-  font-family: var(--font-sans-active);
+@layer base {
+  body {
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans-active);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display-active);
+    line-height: 1.2;
+    letter-spacing: var(--tracking-heading);
+  }
+
+  /* Latin-only tracking: negative letter-spacing breaks Arabic joining */
+  :lang(ar) :is(h1, h2, h3, h4) {
+    letter-spacing: 0;
+  }
+
+  ::selection {
+    background: var(--color-brand-100);
+    color: var(--color-text-primary);
+  }
 }

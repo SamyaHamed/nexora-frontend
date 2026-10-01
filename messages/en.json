@@ -36,8 +36,181 @@
     "instagram": "Instagram",
     "linkedin": "LinkedIn"
   },
+  "Logo": {
+    "homeLabel": "Nexora Software Solutions — Home"
+  },
   "Layout": {
     "skipToContent": "Skip to content"
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "Nexora Software Solutions",
+      "title": "We build practical digital solutions that move your business forward.",
+      "description": "Websites, apps and custom systems — designed with care, built to scale, and supported long after launch.",
+      "primaryCta": "Start your project",
+      "secondaryCta": "View our work",
+      "visual": {
+        "requestTitle": "Project request",
+        "requestStatus": "In review",
+        "fromIdea": "From idea",
+        "toLaunch": "to launch",
+        "bilingual": "Arabic & English",
+        "rtlReady": "RTL ready"
+      }
+    },
+    "services": {
+      "eyebrow": "What we do",
+      "title": "Software built around your business",
+      "description": "From the first sketch to long-term support, one team handles design, development and delivery.",
+      "learnMore": "Learn more",
+      "items": {
+        "web": {
+          "title": "Website & app development",
+          "description": "Fast, responsive websites and mobile apps built with React, Next.js and Node.js."
+        },
+        "systems": {
+          "title": "Custom systems",
+          "description": "Internal tools, portals and dashboards shaped around how your team actually works."
+        },
+        "ux": {
+          "title": "UX/UI design",
+          "description": "Research-led interfaces that are clear, accessible and true to your brand."
+        },
+        "api": {
+          "title": "APIs & integrations",
+          "description": "Documented REST APIs that connect your products, payments and third-party services."
+        },
+        "db": {
+          "title": "Databases",
+          "description": "Well-structured PostgreSQL and MongoDB data models that stay fast as you grow."
+        },
+        "support": {
+          "title": "Support & maintenance",
+          "description": "Monitoring, backups, updates and a team that answers when something needs fixing."
+        }
+      }
+    },
+    "projects": {
+      "eyebrow": "Featured projects",
+      "title": "Work we’re proud of",
+      "description": "A selection of products we’ve designed and built for our clients.",
+      "viewAll": "All projects",
+      "categories": {
+        "customSystem": "Custom system",
+        "mobileApp": "Mobile app",
+        "website": "Website"
+      },
+      "items": {
+        "p1": {
+          "title": "[Project name]",
+          "description": "[One-line summary of the problem you solved and the result.]"
+        },
+        "p2": {
+          "title": "[Project name]",
+          "description": "[One-line summary of the problem you solved and the result.]"
+        },
+        "p3": {
+          "title": "[Project name]",
+          "description": "[One-line summary of the problem you solved and the result.]"
+        }
+      }
+    },
+    "comingSoon": {
+      "eyebrow": "Coming soon",
+      "title": "What we’re building next",
+      "description": "Nexora’s own products — follow along as they move from idea to launch.",
+      "category": "Nexora product",
+      "seeAll": "See all upcoming products",
+      "items": {
+        "u1": {
+          "title": "[Product name]",
+          "description": "[What it does and who it’s for.]"
+        },
+        "u2": {
+          "title": "[Product name]",
+          "description": "[What it does and who it’s for.]"
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Our process",
+      "title": "Clear steps from concept to delivery",
+      "steps": {
+        "discover": {
+          "title": "Discover",
+          "description": "We learn your goals, users and constraints, then agree on scope and budget."
+        },
+        "design": {
+          "title": "Design",
+          "description": "Wireframes and UI designs you can click through and comment on."
+        },
+        "build": {
+          "title": "Build",
+          "description": "Frontend, backend and database built in short, visible milestones."
+        },
+        "launch": {
+          "title": "Launch & support",
+          "description": "Testing, deployment with HTTPS and backups, then ongoing care."
+        }
+      }
+    }
+  },
+  "About": {
+    "metaTitle": "About",
+    "metaDescription": "Nexora Software Solutions designs, builds and supports websites, apps and custom systems for businesses.",
+    "header": {
+      "eyebrow": "About Nexora",
+      "title": "A software team that turns ideas into practical digital products.",
+      "description": "Nexora Software Solutions designs, builds and supports websites, apps and custom systems for businesses that want technology that simply works."
+    },
+    "whoWeAre": {
+      "eyebrow": "Who we are",
+      "title": "Small enough to care, skilled enough to deliver",
+      "paragraph1": "[Company introduction — two or three sentences on when Nexora started, who is on the team, and the kinds of clients you work with.]",
+      "paragraph2": "[A second paragraph on how you work: one team across design, frontend, backend and support, working in Arabic and English.]"
+    },
+    "vision": {
+      "label": "Our vision",
+      "text": "[A world where every business can turn its ideas into reliable digital products.]"
+    },
+    "mission": {
+      "label": "Our mission",
+      "text": "[To design and build practical software that solves real problems, on time and with care.]"
+    },
+    "values": {
+      "eyebrow": "Our values",
+      "title": "How we work",
+      "items": {
+        "practical": {
+          "title": "Practical first",
+          "description": "We build what solves the problem — no unnecessary features, no jargon."
+        },
+        "communication": {
+          "title": "Clear communication",
+          "description": "You always know what we’re working on, what’s next and what it costs."
+        },
+        "lasting": {
+          "title": "Built to last",
+          "description": "Clean code, documentation and security from day one, not as an afterthought."
+        },
+        "partners": {
+          "title": "Long-term partners",
+          "description": "We stay after launch to support, measure and improve."
+        }
+      }
+    }
+  },
+  "CtaBand": {
+    "title": "Have an idea? Let’s turn it into a working product.",
+    "description": "Tell us what you need — we’ll reply with a clear plan, timeline and estimate.",
+    "primaryCta": "Start your project",
+    "secondaryCta": "Get in touch"
+  },
+  "ProductStatus": {
+    "planning": "Planning",
+    "development": "In development",
+    "beta": "Beta",
+    "launched": "Launched"
   },
   "Showcase": {
     "eyebrow": "Component Library",

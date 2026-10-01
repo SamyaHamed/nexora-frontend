@@ -34,6 +34,9 @@ admin dashboard. Full requirements: docs/requirements.pdf
 - Keep components small and typed; no `any`
 
 ## Design
-Modern, minimal, uncluttered. Dark neutral backgrounds with orange as the accent.
+Modern, minimal, uncluttered. Light theme: white canvas, charcoal (#111) text,
+orange (#FC780E) used sparingly for CTAs, highlights and active states. Dark
+(#111) only for select sections, never the dominant background. No heavy orange
+backgrounds, few gradients, no orange body text. Tokens live in app/globals.css.
 Use the logo in public/ as-is (never change colors or proportions).
-Fonts: IBM Plex Sans Arabic (Arabic), Inter (Latin).
+Fonts: IBM Plex Sans Arabic (Arabic), Inter (Latin body), Manrope (Latin headings).

@@ -47,7 +47,7 @@ export function NavLinks({
               className={cn(
                 "text-sm font-medium transition-colors hover:text-[color:var(--color-text-primary)]",
                 orientation === "vertical" &&
-                  "block rounded-[var(--radius-md)] px-3 py-2.5 text-base hover:bg-[color:var(--color-surface)]",
+                  "block rounded-[var(--radius-md)] px-3 py-2.5 text-base hover:bg-[color:var(--color-surface-hover)]",
                 isActive
                   ? "text-[color:var(--color-text-primary)]"
                   : "text-[color:var(--color-text-muted)]",

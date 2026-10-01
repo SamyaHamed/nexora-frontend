@@ -43,7 +43,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select
           aria-describedby={describedBy}
           defaultValue={props.defaultValue ?? (placeholder ? "" : undefined)}
           className={cn(
-            "h-11 w-full appearance-none rounded-[var(--radius-md)] border bg-[color:var(--color-surface)] ps-3.5 pe-10 text-[color:var(--color-text-primary)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--color-bg)] disabled:cursor-not-allowed disabled:opacity-50",
+            "h-11 w-full appearance-none rounded-[var(--radius-md)] border bg-[color:var(--color-card)] ps-3.5 pe-10 text-[color:var(--color-text-primary)] transition-[border-color,box-shadow] focus-visible:border-[color:var(--color-brand)] focus-visible:shadow-[var(--shadow-focus)] focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
             error ? "border-[color:var(--color-danger)]" : "border-[color:var(--color-border)]",
             className,
           )}
