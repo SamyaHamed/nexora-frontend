@@ -68,26 +68,7 @@
       "eyebrow": "Featured projects",
       "title": "Work we’re proud of",
       "description": "A selection of products we’ve designed and built for our clients.",
-      "viewAll": "All projects",
-      "categories": {
-        "customSystem": "Custom system",
-        "mobileApp": "Mobile app",
-        "website": "Website"
-      },
-      "items": {
-        "p1": {
-          "title": "[Project name]",
-          "description": "[One-line summary of the problem you solved and the result.]"
-        },
-        "p2": {
-          "title": "[Project name]",
-          "description": "[One-line summary of the problem you solved and the result.]"
-        },
-        "p3": {
-          "title": "[Project name]",
-          "description": "[One-line summary of the problem you solved and the result.]"
-        }
-      }
+      "viewAll": "All projects"
     },
     "comingSoon": {
       "eyebrow": "Coming soon",
@@ -261,6 +242,60 @@
           "f3": "Feature improvements"
         }
       }
+    }
+  },
+  "Projects": {
+    "metaTitle": "Projects",
+    "metaDescription": "Websites, apps and custom systems designed and built by Nexora Software Solutions.",
+    "header": {
+      "eyebrow": "Projects",
+      "title": "Products we’ve designed, built and launched.",
+      "description": "Each project lists the problem, what we built and the technologies behind it."
+    },
+    "filterLabel": "Filter projects by category",
+    "categories": {
+      "all": "All",
+      "website": "Website",
+      "mobileApp": "Mobile app",
+      "customSystem": "Custom system",
+      "uxui": "UX/UI"
+    },
+    "items": {
+      "p1": {
+        "title": "[Project name]",
+        "description": "[One-line summary and result.]"
+      },
+      "p2": {
+        "title": "[Project name]",
+        "description": "[One-line summary and result.]"
+      },
+      "p3": {
+        "title": "[Project name]",
+        "description": "[One-line summary and result.]"
+      },
+      "p4": {
+        "title": "[Project name]",
+        "description": "[One-line summary and result.]"
+      },
+      "p5": {
+        "title": "[Project name]",
+        "description": "[One-line summary and result.]"
+      },
+      "p6": {
+        "title": "[Project name]",
+        "description": "[One-line summary and result.]"
+      }
+    },
+    "caseStudy": {
+      "eyebrow": "Case study",
+      "title": "[Client name]: [headline result]",
+      "imagePlaceholder": "[Case study cover image]",
+      "problemLabel": "Problem",
+      "problem": "[What wasn’t working for the client.]",
+      "solutionLabel": "Solution",
+      "solution": "[What Nexora designed and built.]",
+      "resultsLabel": "Results",
+      "results": "[Measured outcome after launch.]"
     }
   },
   "CtaBand": {

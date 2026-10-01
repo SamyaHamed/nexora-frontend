@@ -5,10 +5,14 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ProjectCard } from "@/features/projects/components/ProjectCard";
-import { featuredProjects } from "../data";
+import { projects } from "@/features/projects/data";
 
 export async function FeaturedProjectsSection() {
-  const t = await getTranslations("Home.projects");
+  const [t, tProjects] = await Promise.all([
+    getTranslations("Home.projects"),
+    getTranslations("Projects"),
+  ]);
+  const featuredProjects = projects.filter((project) => project.featured);
 
   return (
     <Section>
@@ -23,9 +27,9 @@ export async function FeaturedProjectsSection() {
           {featuredProjects.map((project) => (
             <li key={project.key}>
               <ProjectCard
-                category={t(`categories.${project.category}`)}
-                title={t(`items.${project.key}.title`)}
-                description={t(`items.${project.key}.description`)}
+                category={tProjects(`categories.${project.category}`)}
+                title={tProjects(`items.${project.key}.title`)}
+                description={tProjects(`items.${project.key}.description`)}
                 tags={project.tags}
               />
             </li>

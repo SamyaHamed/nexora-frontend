@@ -4,18 +4,6 @@ import type { ProductStatus } from "@/features/projects/types";
 // messages/*.json under "Home"; keys here pick the message, and tags are
 // technology names, which stay the same in every locale.
 
-export type ProjectCategoryKey = "customSystem" | "mobileApp" | "website";
-
-export const featuredProjects: {
-  key: "p1" | "p2" | "p3";
-  category: ProjectCategoryKey;
-  tags: string[];
-}[] = [
-  { key: "p1", category: "customSystem", tags: ["Next.js", "Node.js", "PostgreSQL"] },
-  { key: "p2", category: "mobileApp", tags: ["React Native", "Express"] },
-  { key: "p3", category: "website", tags: ["Next.js", "Tailwind CSS"] },
-];
-
 export const upcomingProducts: {
   key: "u1" | "u2";
   status: ProductStatus;
